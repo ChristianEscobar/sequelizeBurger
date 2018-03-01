@@ -8,6 +8,9 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Requiring our models for syncing
+const db = require("./models");
+
 // Middleware
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
@@ -26,8 +29,14 @@ app.set("view engine", "handlebars");
 // Routes
 app.use("/", routes);
 
-// Listen
-app.listen(port, () => {
-	console.log("Server started, listening on port " + port);
-})
+
+// Syncing our sequelize models and then starting our Express app
+db.sequelize.sync()
+.then(() => {
+	app.listen(port, () => {
+		console.log("Server started, listening on port " + port);
+	});
+}).catch((error) => {
+	console.error(error);
+});
 
