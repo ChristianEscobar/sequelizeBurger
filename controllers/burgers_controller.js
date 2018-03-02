@@ -8,7 +8,8 @@ router.post("/", (req, res) => {
 	Burger.create({
 		burger_name: req.body.burgerDescription
 	}).then((results) => {
-		res.status(200).json(results);
+		// Load the index view
+		res.redirect("/");
 	}).catch((error) => {
 		res.status(500).send(error);
 	});
@@ -18,7 +19,13 @@ router.post("/", (req, res) => {
 router.get("/", (req, res) => {
 	Burger.findAll()
 	.then((results) => {
-		res.status(200).json(results);
+		// Build burgers object for Handlebars index view
+		const burgersObj = {
+			burgers: results
+		}
+
+		// Load the index view
+		res.render("index", burgersObj);
 	}).catch((error) => {
 		res.status(500).send(error);
 	});
@@ -30,7 +37,8 @@ router.put("/:id", (req, res) => {
 	.then((burger) => {
 		burger.update(req.body)
 		.then((results) => {
-			res.status(200).json(results);
+			// Load the index view
+			res.redirect("/");
 		})
 	}).catch((error) => {
 		res.status(500).send(error);
