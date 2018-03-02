@@ -31,12 +31,13 @@ router.get("/", (req, res) => {
 	});
 });
 
-// Update devoured flag for a specific burger based on the id
+// Update devoured flag  to true for a specific burger based on the id
 router.put("/:id", (req, res) => {
 	Burger.findById(req.params.id)
 	.then((burger) => {
-		burger.update(req.body)
+		burger.update({devoured: true})
 		.then((results) => {
+
 			// Load the index view
 			res.redirect("/");
 		})
