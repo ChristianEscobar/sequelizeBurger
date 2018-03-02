@@ -25,6 +25,15 @@ div.title {
 	text-align: center;
 }
 
+ul.dropdown-menu {
+	width: 240%;
+	padding: 10px;
+}
+
+span.input-group-btn {
+	display: inherit;
+}
+
 li.list-group-item {
 	margin-bottom: 5px;
 }
