@@ -6,7 +6,7 @@ function connection() {
 	return  {
 		host: 'localhost',
   	user: 'root',
-  	database: 'burgers_db'
+  	database: 'burgers_db_seq'
 	}
 }
 
