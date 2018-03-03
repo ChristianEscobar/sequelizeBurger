@@ -2,11 +2,10 @@ module.exports = function(sequelize, DataTypes) {
 	const Burger = sequelize.define("Burger", {
 		burgerName: {
 			type: DataTypes.STRING,
-
+			allowNull: false,
 			validate: {
 				len: [1],
-				notEmpty: true,
-				allowNull: false
+				notEmpty: true
 			}
 		},
 		devoured: {
