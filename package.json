@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "sequelizeBurger",
   "version": "1.0.0",
-  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars and Sequelize (yum!).",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xtiane/burger.git"
+    "url": "git+https://github.com/xtiane/sequelizeBurger.git"
   },
   "author": "crs.escobar@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xtiane/burger/issues"
+    "url": "https://github.com/xtiane/sequelizeBurger/issues"
   },
-  "homepage": "https://github.com/xtiane/burger#readme",
+  "homepage": "https://github.com/xtiane/sequelizeBurger#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
