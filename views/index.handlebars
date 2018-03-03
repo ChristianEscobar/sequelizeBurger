@@ -5,7 +5,7 @@
 			{{#each burgers}}
 				{{#unless this.devoured}}
 					<li class="list-group-item">
-						{{ this.id }}. {{ this.burger_name }}
+						{{ this.id }}. {{ this.burgerName }}
 						
 						<div class="devour-btn-container">
 							<div class="dropdown">
@@ -40,7 +40,7 @@
 			{{#each burgers}}
 				{{#if this.devoured}}
 					<li class="list-group-item">
-						{{ this.id }}. {{ this.burger_name }}
+						{{ this.id }}. {{ this.burgerName }} ({{this.Customer.name}} has chomped on this)
 					</li>
 				{{/if}}
 			{{/each}}

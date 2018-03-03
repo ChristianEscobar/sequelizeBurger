@@ -7,7 +7,7 @@ const Customer = db.Customer;
 // Add a new burger to the database
 router.post("/", (req, res) => {
 	Burger.create({
-		burger_name: req.body.burgerDescription
+		burgerName: req.body.burgerDescription
 	}).then((results) => {
 		// Load the index view
 		res.redirect("/");
@@ -18,8 +18,9 @@ router.post("/", (req, res) => {
 
 // Get all burgers from the database
 router.get("/", (req, res) => {
-	Burger.findAll()
-	.then((results) => {
+	Burger.findAll({
+		include: [ Customer ]
+	}).then((results) => {
 		// Build burgers object for Handlebars index view
 		const burgersObj = {
 			burgers: results

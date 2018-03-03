@@ -31,6 +31,12 @@ app.use("/", routes);
 
 
 // Syncing our sequelize models and then starting our Express app
+// 1 to 1 association to Customer model
+db.Burger.belongsTo(db.sequelize.models.Customer);
+
+// 1 to many association to Burgers model
+db.Customer.hasMany(db.sequelize.models.Burger);
+
 db.sequelize.sync({force: true})
 .then(() => {
 	app.listen(port, () => {
