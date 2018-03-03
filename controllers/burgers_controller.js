@@ -19,6 +19,7 @@ router.post("/", (req, res) => {
 // Get all burgers from the database
 router.get("/", (req, res) => {
 	Burger.findAll({
+		order: ["burgerName"],
 		include: [ Customer ]
 	}).then((results) => {
 		// Build burgers object for Handlebars index view
