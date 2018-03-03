@@ -7,8 +7,7 @@ const Customer = db.Customer;
 // Add a new burger to the database
 router.post("/", (req, res) => {
 	Burger.create({
-		burgerName: req.body.burgerDescription,
-		devoured: false
+		burgerName: req.body.burgerDescription
 	}).then((results) => {
 		// Load the index view
 		res.redirect("/");
