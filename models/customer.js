@@ -9,5 +9,8 @@ module.exports = function(sequelize, DataTypes) {
 		}
 	});
 
+	// 1 to many association to Burgers model
+	Customer.hasMany(sequelize.models.Burger);
+
 	return Customer;
 };
