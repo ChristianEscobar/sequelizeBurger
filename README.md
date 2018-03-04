@@ -4,7 +4,7 @@
 
 ## What Is It?
 
-Burger Chomp is a burger logger application created using MySQL, Node, Express, Handlebars and Sequelize.  This version contains the same functionality as [Burger Chomp SQL](https://burger-chomp.herokuapp.com/), but with added functionality that allows entering the name of the customer that chomped on a particular burger.
+Burger Chomp is a burger logger application created using MySQL, Node, Express, Handlebars and Sequelize.  This version contains the same functionality as the [Burger Chomp SQL](https://burger-chomp.herokuapp.com/) version, but with added functionality that allows entering the name of the customer that chomped on a particular burger.
 
 ## How Does It Work?
 
